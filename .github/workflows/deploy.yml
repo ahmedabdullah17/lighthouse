@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main # أو اسم البرانش الأساسي بتاعك
+      - main # Change this if your main branch has a different name
 
 jobs:
   build-and-deploy:
@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/ # تأكد إن ده المسار الصح في Hostinger
+          server-dir: /public_html/ # This is the standard folder on Hostinger
