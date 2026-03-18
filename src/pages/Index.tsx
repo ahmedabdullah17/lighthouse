@@ -1,16 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+"use client";
 
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import SpecialOffers from '@/components/SpecialOffers';
+import Destinations from '@/components/Destinations';
+import LuxurySection from '@/components/LuxurySection';
+import TechLiving from '@/components/TechLiving';
+import PartnerSection from '@/components/PartnerSection';
+import PartnersBar from '@/components/PartnersBar';
+import FAQSection from '@/components/FAQSection';
+import Footer from '@/components/Footer';
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
+    <div className="min-h-screen bg-white font-sans selection:bg-primary/10 selection:text-primary">
+      <Navbar />
+      <main>
+        <Hero />
+        <SpecialOffers />
+        <Destinations />
+        <LuxurySection />
+        <TechLiving />
+        <PartnerSection />
+        <PartnersBar />
+        <FAQSection />
+      </main>
+      <Footer />
       <MadeWithDyad />
     </div>
   );
