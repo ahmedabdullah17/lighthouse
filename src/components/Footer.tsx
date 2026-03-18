@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
           <p className="text-white/30 text-sm font-bold">
-            © 2024 Lighthouse Hospitality. All rights reserved.
+            © 2026 Lighthouse Hospitality. All rights reserved.
           </p>
           <div className="flex gap-8 text-white/30 text-sm font-bold">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
