@@ -3,6 +3,7 @@
 import React from 'react';
 import { Heart, Star, MapPin, Clock, Zap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const properties = [
   {
@@ -85,7 +86,6 @@ const SpecialOffers = () => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               
-              {/* Badges */}
               <div className="absolute top-4 left-4 flex flex-col gap-2">
                 <div className="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
                   <Zap size={12} className="text-secondary fill-secondary" />
@@ -96,12 +96,10 @@ const SpecialOffers = () => {
                 </div>
               </div>
 
-              {/* Wishlist */}
               <button className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-red-500 transition-all shadow-lg">
                 <Heart size={20} />
               </button>
 
-              {/* Timer Overlay */}
               <div className="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-xl rounded-2xl p-3 flex items-center justify-between text-white border border-white/10">
                 <div className="flex items-center gap-2">
                   <Clock size={14} className="text-secondary" />
