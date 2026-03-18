@@ -11,7 +11,6 @@ import PartnerSection from '@/components/PartnerSection';
 import PartnersBar from '@/components/PartnersBar';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
-import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
@@ -28,7 +27,6 @@ const Index = () => {
         <FAQSection />
       </main>
       <Footer />
-      <MadeWithDyad />
     </div>
   );
 };

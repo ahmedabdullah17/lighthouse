@@ -13,11 +13,11 @@ import {
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
         {/* Logo & Main Nav */}
         <div className="flex items-center gap-12">
           <a href="/" className="shrink-0">
-            <img src="/src/assets/logo.png" alt="Lighthouse Logo" className="h-10 w-auto" />
+            <img src="/src/assets/logo.png" alt="Lighthouse Logo" className="h-16 w-auto" />
           </a>
           
           <div className="hidden lg:flex items-center gap-8">
