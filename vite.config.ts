@@ -4,9 +4,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(() => ({
-  // If your repo is 'my-repo', change this to '/my-repo/'
-  // If your repo is 'ahmedabdullah17.github.io', keep it as '/'
-  base: "/", 
+  // Since your repository is 'lighthouse', we set the base to '/lighthouse/'
+  base: "/lighthouse/", 
   server: {
     host: "::",
     port: 8080,
