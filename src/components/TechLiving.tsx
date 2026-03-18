@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Smartphone, ShieldCheck, MessageSquare, Sparkles } from 'lucide-react';
+import phoneMockup from '@/assets/phonemockup.avif';
 
 const TechLiving = () => {
   return (
@@ -54,7 +55,7 @@ const TechLiving = () => {
           <div className="flex-1 relative">
             <div className="relative z-10">
               <img 
-                src="/src/assets/phonemockup.avif" 
+                src={phoneMockup} 
                 alt="Lighthouse App Mockup" 
                 className="w-full max-w-[500px] mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] animate-in fade-in slide-in-from-bottom-10 duration-1000"
               />

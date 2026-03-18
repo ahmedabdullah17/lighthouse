@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logo from '@/assets/logo.png';
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
         {/* Logo & Main Nav */}
         <div className="flex items-center gap-12">
           <a href="/" className="shrink-0">
-            <img src="/src/assets/logo.png" alt="Lighthouse Logo" className="h-16 w-auto" />
+            <img src={logo} alt="Lighthouse Logo" className="h-16 w-auto" />
           </a>
           
           <div className="hidden lg:flex items-center gap-8">

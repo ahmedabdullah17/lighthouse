@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Instagram, Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-8">
             <div className="bg-white rounded-3xl w-24 h-24 flex items-center justify-center p-4 shadow-2xl">
-              <img src="/src/assets/logo.png" alt="Lighthouse Logo" className="w-full h-auto" />
+              <img src={logo} alt="Lighthouse Logo" className="w-full h-auto" />
             </div>
             <p className="text-white/50 text-lg leading-relaxed max-w-sm">
               Redefining luxury hospitality in Egypt. We provide curated stays and world-class property management services.
