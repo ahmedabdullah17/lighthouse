@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Search, MapPin, Calendar as CalendarIcon, Users, ChevronDown } from 'lucide-react';
+import { Search, MapPin, Calendar as CalendarIcon, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -18,6 +18,8 @@ import {
 } from "@/components/ui/select";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import SearchResultsModal from './SearchResultsModal';
+import { toast } from "sonner";
 
 const destinations = [
   { id: 1, name: "Marassi Marina", location: "North Coast" },
@@ -32,6 +34,18 @@ const Hero = () => {
   const [dateOut, setDateOut] = useState<Date>();
   const [location, setLocation] = useState("");
   const [guests, setGuests] = useState("2");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSearch = () => {
+    if (!location || !dateIn || !dateOut) {
+      toast.error("Please fill in all search details", {
+        description: "Destination and dates are required to find your perfect stay.",
+        className: "rounded-2xl font-bold",
+      });
+      return;
+    }
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="relative h-[90vh] min-h-[700px] flex flex-col items-center justify-center pt-20 overflow-hidden">
@@ -180,11 +194,21 @@ const Hero = () => {
           </div>
 
           {/* Search Button */}
-          <Button className="w-full lg:w-20 h-16 lg:h-20 rounded-[2rem] bg-primary hover:bg-primary/90 transition-all shrink-0 shadow-xl group">
+          <Button 
+            onClick={handleSearch}
+            className="w-full lg:w-20 h-16 lg:h-20 rounded-[2rem] bg-primary hover:bg-primary/90 transition-all shrink-0 shadow-xl group"
+          >
             <Search size={28} className="text-white group-hover:scale-110 transition-transform" />
           </Button>
         </div>
       </div>
+
+      {/* Search Results Modal */}
+      <SearchResultsModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        searchData={{ location, guests }}
+      />
     </section>
   );
 };
